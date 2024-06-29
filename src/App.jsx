@@ -1,12 +1,15 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import AppRouter from './router/routes';
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Index from "./page";
 
 function App() {
-
   return (
-    <AppRouter/>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Index/>}/>
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
